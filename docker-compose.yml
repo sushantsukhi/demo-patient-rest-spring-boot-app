@@ -1,0 +1,12 @@
+version: '2.1'
+services:
+    demo-patient-docker:
+        container_name: demo-patient-docker
+        build:
+            context: .
+            dockerfile: Dockerfile
+        image: config-server:latest
+        expose:
+            - 8888
+        ports:
+            - "8888:8888"
